@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Свадебное приглашение</title>
+  <meta name="description" content="Приглашение на свадьбу с анимацией и музыкой">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="bg-glow bg-glow-one"></div>
+  <div class="bg-glow bg-glow-two"></div>
+  <div class="petals" aria-hidden="true"></div>
+
+  <button class="music-toggle" id="musicToggle" aria-label="Включить музыку" aria-pressed="false">
+    <span class="music-toggle__icon">♪</span>
+    <span class="music-toggle__text">Музыка</span>
+  </button>
+
+  <audio id="weddingAudio" loop preload="none">
+    <source src="music/our-song.mp3" type="audio/mpeg">
+  </audio>
+
+  <main class="invite">
+    <section class="hero reveal">
+      <p class="hero__eyebrow">СВАДЕБНОЕ ПРИГЛАШЕНИЕ</p>
+      <h1 class="hero__names">Александр и Екатерина</h1>
+      <p class="hero__line">
+        Мы скажем друг другу "Да" и будем счастливы разделить этот день с вами.
+      </p>
+      <p class="hero__date">22 августа 2026</p>
+      <a class="btn btn-primary" href="#details">Смотреть детали</a>
+    </section>
+
+    <section class="countdown reveal" id="details">
+      <h2>До праздника осталось</h2>
+      <div class="countdown__grid">
+        <article class="countdown__item">
+          <span class="countdown__value" id="days">0</span>
+          <span class="countdown__label">дней</span>
+        </article>
+        <article class="countdown__item">
+          <span class="countdown__value" id="hours">0</span>
+          <span class="countdown__label">часов</span>
+        </article>
+        <article class="countdown__item">
+          <span class="countdown__value" id="minutes">0</span>
+          <span class="countdown__label">минут</span>
+        </article>
+      </div>
+      <p class="countdown__note" id="countdownNote">Сохраняйте дату в календарь</p>
+    </section>
+
+    <section class="events">
+      <article class="event-card reveal">
+        <h3>Церемония</h3>
+        <p class="event-card__time">15:00</p>
+        <p>Дворец бракосочетания №2, Саратов</p>
+      </article>
+      <article class="event-card reveal">
+        <h3>Банкет</h3>
+        <p class="event-card__time">17:00</p>
+        <p>Ресторан "Белая Веранда", ул. Набережная, 17</p>
+      </article>
+    </section>
+
+    <section class="timeline reveal">
+      <h2>Программа дня</h2>
+      <ul>
+        <li><span>14:30</span> Сбор гостей</li>
+        <li><span>15:00</span> Церемония регистрации</li>
+        <li><span>16:00</span> Фотосессия и поздравления</li>
+        <li><span>17:00</span> Начало банкета</li>
+        <li><span>21:00</span> Первый танец и торт</li>
+      </ul>
+    </section>
+
+    <section class="rsvp reveal">
+      <h2>Подтвердите присутствие</h2>
+      <p>Пожалуйста, дайте ответ до 1 августа 2026.</p>
+      <div class="rsvp__actions">
+        <a class="btn btn-primary" href="https://t.me/your_name" target="_blank" rel="noopener noreferrer">Написать в Telegram</a>
+        <a class="btn btn-secondary" href="tel:+79990000000">Позвонить нам</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer reveal">
+    <p>Будем счастливы разделить этот день вместе с вами</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
